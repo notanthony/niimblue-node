@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MultiMote/niimblue-node.git"
+    "url": "git+https://github.com/notanthony/niimblue-node.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,7 +31,8 @@
   "scripts": {
     "clean-build": "yarn clean && yarn build",
     "build": "tsc --build",
-    "cli": "tsc --build && node cli.mjs"
+    "cli": "tsc --build && node cli.mjs",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
@@ -39,7 +40,7 @@
   },
   "dependencies": {
     "@commander-js/extra-typings": "^12.1.0",
-    "@mmote/niimbluelib": "0.0.1-alpha.32",
+    "@mmote/niimbluelib": "git+https://github.com/notanthony/niimbluelib.git#main",
     "@stoprocent/noble": "^2.3.10",
     "async-mutex": "^0.5.0",
     "commander": "^12.1.0",
